@@ -1,0 +1,47 @@
+.section {
+  position: relative; z-index: 1;
+  max-width: 1140px; margin: 0 auto;
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1;
+  min-width: 190px;
+  max-width: 240px;
+  background: rgba(0,255,136,0.04);
+  border: 1px solid rgba(0,255,136,0.14);
+  border-radius: 16px;
+  padding: 34px 22px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #e0ffe8;
+  letter-spacing: 1px;
+}
+
+.sub {
+  font-size: 0.78rem;
+  color: #405060;
+  margin-top: 6px;
+}

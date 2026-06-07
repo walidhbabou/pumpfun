@@ -1,0 +1,169 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  overflow: hidden;
+}
+
+/* Moon */
+.moon {
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle at 33% 33%, #ffffcc, #c8c800 55%, #888800);
+  border-radius: 50%;
+  box-shadow: 0 0 100px 50px rgba(255,215,0,0.07);
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: 0;
+}
+
+/* Badge */
+.badge {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: rgba(0,255,136,0.1);
+  border: 1px solid #00ff88;
+  border-radius: 100px;
+  padding: 6px 22px;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  color: #00ff88;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+@keyframes pulseBadge {
+  0%,100% { box-shadow: 0 0 0 0 rgba(0,255,136,0.4); }
+  50%      { box-shadow: 0 0 0 12px rgba(0,255,136,0); }
+}
+
+/* Rocket */
+.rocket {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 24px #00ff88);
+  position: relative; z-index: 1;
+}
+
+/* Title */
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(3.2rem, 12vw, 9rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #00ff88 0%, #00ffcc 40%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+  position: relative; z-index: 1;
+}
+@keyframes titleGlow {
+  from { filter: drop-shadow(0 0 20px rgba(0,255,136,0.45)); }
+  to   { filter: drop-shadow(0 0 60px rgba(0,255,136,0.9)); }
+}
+
+/* Sub */
+.sub {
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+  color: #80ffb0;
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  position: relative; z-index: 1;
+}
+
+/* Desc */
+.desc {
+  max-width: 660px;
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #a0c8b0;
+  margin-bottom: 48px;
+  position: relative; z-index: 1;
+}
+
+/* CTA row */
+.ctaRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative; z-index: 1;
+}
+
+/* CA Box */
+.caBox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(0,255,136,0.06);
+  border: 1px solid rgba(0,255,136,0.18);
+  border-radius: 12px;
+  padding: 14px 24px;
+  max-width: 660px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative; z-index: 1;
+}
+.caLabel {
+  font-size: 0.7rem;
+  color: #00ff88;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.caAddr {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.78rem;
+  color: #e0ffe8;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+  text-align: center;
+  flex: 1;
+}
+.copyBtn {
+  background: #00ff88;
+  color: #020c05;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Scroll hint */
+.scrollHint {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(0,255,136,0.35);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative; z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .moon { width: 130px; height: 130px; top: -40px; right: -40px; }
+  .caBox { padding: 12px 14px; }
+}
